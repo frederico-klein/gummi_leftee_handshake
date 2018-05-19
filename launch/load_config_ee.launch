@@ -1,0 +1,9 @@
+<launch>
+  <!-- This file is specific for handshake ee (end-effector). The eval expression is superfluous and
+  it only makes sense to keep it, so that this can be adapted to other end-effectors faster. -->
+  <arg name="ee" value="$(env ROS_GUMMI_LEFTEE)"/>
+  <rosparam file="$(eval find('gummi_leftee_' + ee) + '/config/left_wrist_pitch.yaml')" command="load" ns="left_wrist_pitch"/>
+  <rosparam file="$(eval find('gummi_leftee_' + ee) + '/config/calibration_left_wrist_pitch.yaml')" command="load" ns="left_wrist_pitch/calib"/>
+  <rosparam file="$(eval find('gummi_leftee_' + ee) + '/config/left_forearm_roll.yaml')" command="load" ns="left_forearm_roll"/>
+  <rosparam file="$(eval find('gummi_leftee_' + ee) + '/config/left_gripper.yaml')" command="load" ns="left_gripper"/>
+</launch>
