@@ -1,12 +1,12 @@
-left_wrist_encoder_controller:
+wrist_extensor_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_wrist_encoder
-    joint_speed: 0.5
+    joint_name: wrist_extensor
+    joint_speed: 6.28
     motor:
-        id: 25
+        id: 23
         init: 512
         min: 0
         max: 1023

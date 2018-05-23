@@ -3,14 +3,14 @@ equilibrium:
     sign: -1
     signFlexor: -1
     signExtensor: -1
-    nameFlexor: "left_wrist_flexor"
-    nameExtensor: "left_wrist_extensor"
+    nameFlexor: "wrist_flexor"
+    nameExtensor: "wrist_extensor"
     servoRange: 5.4978
     servoOffset: 0
 signEncoder: -1
 signJoint: 1
-name: "left_wrist_pitch"
-nameEncoder: "left_wrist_encoder"
+name: "wrist_pitch"
+nameEncoder: "wrist_encoder"
 minAngle: -0.7
 maxAngle: 0.7
 maxAbsForwardError: 5.0

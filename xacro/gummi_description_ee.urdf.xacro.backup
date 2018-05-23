@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot>
   <link
-    name="left/lowerarm_preroll_d">
+    name="lowerarm_preroll_d">
     <inertial>
       <origin
         xyz="0.0192090313803226 -0.000209732444885397 -0.00477606520095217"
@@ -41,20 +41,20 @@
     </collision>
   </link>
   <joint
-    name="left/fastswitch"
+    name="fastswitch"
     type="fixed">
     <origin
       xyz="0.056236 -0.019 -0.006"
       rpy="0 0 0" />
     <parent
-      link="left/lowerarm_preroll_u" />
+      link="lowerarm_preroll_u" />
     <child
-      link="left/lowerarm_preroll_d" />
+      link="lowerarm_preroll_d" />
     <axis
       xyz="0 0 0" />
   </joint>
   <link
-    name="left/lowerarm">
+    name="lowerarm">
     <inertial>
       <origin
         xyz="0.076518166900465 0.000154587846369382 0.00668942647768447"
@@ -94,15 +94,15 @@
     </collision>
   </link>
   <joint
-    name="left/forearm_roll"
+    name="forearm_roll"
     type="continuous">
     <origin
       xyz="0.043506 -0.00023376 -0.019876"
       rpy="0 0 0" />
     <parent
-      link="left/lowerarm_preroll_d" />
+      link="lowerarm_preroll_d" />
     <child
-      link="left/lowerarm" />
+      link="lowerarm" />
     <axis
       xyz="-1 0 0" />
     <limit
@@ -110,7 +110,7 @@
       velocity="1" />
   </joint>
   <link
-    name="left/wrist">
+    name="wrist">
     <inertial>
       <origin
         xyz="0.0484512742480244 0.0139768664666073 0.000956995637939325"
@@ -150,15 +150,15 @@
     </collision>
   </link>
   <joint
-    name="left/wrist_pitch"
+    name="wrist_pitch"
     type="revolute">
     <origin
       xyz="0.1511 -0.01935 0.0048471"
       rpy="0 0 0" />
     <parent
-      link="left/lowerarm" />
+      link="lowerarm" />
     <child
-      link="left/wrist" />
+      link="wrist" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -172,16 +172,16 @@
   different rates, set the mimic tag to something different. it allows for an
   offset and a multiplication rate. check ros docs for details
   -->
-  <joint name="left/gripper" type="revolute">
+  <joint name="gripper" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <parent link="left/wrist"/>
-    <child link="dummyleft/gripper"/>
+    <parent link="wrist"/>
+    <child link="dummygripper"/>
     <axis xyz="0 1 0"/>
     <limit effort="0" lower="0" upper="2" velocity="0"/>
   </joint>
-  <link name="dummyleft/gripper"/>
+  <link name="dummygripper"/>
   <link
-    name="left/i1">
+    name="i1">
     <inertial>
       <origin
         xyz="0.0230748926267925 0.00588066789200992 0.00129219082652174"
@@ -221,15 +221,15 @@
     </collision>
   </link>
   <joint
-    name="left/i1f"
+    name="i1f"
     type="revolute">
     <origin
       xyz="0.059922 -0.031986 0.0029515"
       rpy="-0.79367 0.12795 -0.91441" />
     <parent
-      link="left/wrist" />
+      link="wrist" />
     <child
-      link="left/i1" />
+      link="i1" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -237,11 +237,11 @@
       upper="0.8"
       effort="0"
       velocity="0" />
-    <mimic joint="left/gripper"/>
+    <mimic joint="gripper"/>
 
   </joint>
   <link
-    name="left/i2">
+    name="i2">
     <inertial>
       <origin
         xyz="0.029386051121549 0.00499999330192313 0.000893559269171462"
@@ -281,15 +281,15 @@
     </collision>
   </link>
   <joint
-    name="left/i2f"
+    name="i2f"
     type="revolute">
     <origin
       xyz="0.12886 -0.0060786 -0.0024749"
       rpy="-6.9389E-16 -8.4436E-17 -0.12109" />
     <parent
-      link="left/wrist" />
+      link="wrist" />
     <child
-      link="left/i2" />
+      link="i2" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -297,11 +297,11 @@
       upper="0.8"
       effort="0"
       velocity="0" />
-    <mimic joint="left/gripper"/>
+    <mimic joint="gripper"/>
 
   </joint>
   <link
-    name="left/i3">
+    name="i3">
     <inertial>
       <origin
         xyz="0.0333094448268015 0.00500062828207009 0.000926424894512667"
@@ -341,15 +341,15 @@
     </collision>
   </link>
   <joint
-    name="left/i3f"
+    name="i3f"
     type="revolute">
     <origin
       xyz="0.13223 0.0086295 -0.0025"
       rpy="-1.0408E-15 -5.7778E-30 -5.5511E-15" />
     <parent
-      link="left/wrist" />
+      link="wrist" />
     <child
-      link="left/i3" />
+      link="i3" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -357,11 +357,11 @@
       upper="0.8"
       effort="0"
       velocity="0" />
-    <mimic joint="left/gripper"/>
+    <mimic joint="gripper"/>
 
   </joint>
   <link
-    name="left/i4">
+    name="i4">
     <inertial>
       <origin
         xyz="0.0292482948728239 0.00500042157737766 0.00089292978084992"
@@ -401,15 +401,15 @@
     </collision>
   </link>
   <joint
-    name="left/i4f"
+    name="i4f"
     type="revolute">
     <origin
       xyz="0.13046 0.023543 -0.0025"
       rpy="-1.0408E-15 1.4051E-16 0.13418" />
     <parent
-      link="left/wrist" />
+      link="wrist" />
     <child
-      link="left/i4" />
+      link="i4" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -417,11 +417,11 @@
       upper="0.8"
       effort="0"
       velocity="0" />
-    <mimic joint="left/gripper"/>
+    <mimic joint="gripper"/>
 
   </joint>
   <link
-    name="left/i5">
+    name="i5">
     <inertial>
       <origin
         xyz="0.0271094932224739 0.00500024784027392 0.000539597160873585"
@@ -461,15 +461,15 @@
     </collision>
   </link>
   <joint
-    name="left/i5f"
+    name="i5f"
     type="revolute">
     <origin
       xyz="0.12703 0.037692 -0.0025"
       rpy="1.9429E-14 -3.8109E-15 0.19369" />
     <parent
-      link="left/wrist" />
+      link="wrist" />
     <child
-      link="left/i5" />
+      link="i5" />
     <axis
       xyz="0 -1 0" />
     <limit
@@ -477,7 +477,7 @@
       upper="0.8"
       effort="0"
       velocity="0" />
-    <mimic joint="left/gripper"/>
+    <mimic joint="gripper"/>
 
   </joint>
 </robot>

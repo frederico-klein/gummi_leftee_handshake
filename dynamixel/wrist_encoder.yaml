@@ -1,12 +1,12 @@
-left_forearm_roll_controller:
+wrist_encoder_controller:
     controller:
         package: dynamixel_controllers
         module: joint_position_controller
         type: JointPositionController
-    joint_name: left_forearm_roll
-    joint_speed: 3.0
+    joint_name: wrist_encoder
+    joint_speed: 0.5
     motor:
-        id: 21
+        id: 25
         init: 512
         min: 0
         max: 1023

@@ -41,7 +41,7 @@ Run the rest of your code as usual.
 
 ## Setting up new urdf definitions for end effector
 
-The xacro file in the xacro directory has all the urdf definitions (joints and links) for the end-effector from elbow to left_gripper, and should be updated to match the current end-effector
+The xacro file in the xacro directory has all the urdf definitions (joints and links) for the end-effector from elbow to gripper, and should be updated to match the current end-effector
 
 ## What's new
 
