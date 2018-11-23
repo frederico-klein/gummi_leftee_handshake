@@ -1,6 +1,5 @@
 <package>
   <description brief="gummi_leftee_handshake">gummi_leftee_handshake</description>
-  <depend package="gazebo" />
   <author>Frederico Belmonte Klein</author>
   <license>BSD</license>
 </package>
